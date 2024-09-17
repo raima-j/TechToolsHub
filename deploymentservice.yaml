@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: technical-tools-hub
+spec:
+  replicas: 2  # Number of pod instances
+  selector:
+    matchLabels:
+      app: technical-tools-app
+  template:
+    metadata:
+      labels:
+        app: technical-tools-app
+    spec:
+      containers:
+      - name: technical-tools-container
+        image: technical-tools-app:latest  # Name of the Docker image (make sure it's built and pushed to a registry)
+        ports:
+        - containerPort: 5000  # Port where Flask is running
+        env:
+        - name: TESSDATA_PREFIX
+          value: "/app/Assets/Tesseract-OCR/"
+        - name: POPPLER_PATH
+          value: "/app/Assets/Release-24.02.0-0/poppler-24.02.0/Library/bin/"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: technical-tools-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: technical-tools-app
+  ports:
+    - protocol: TCP
+      port: 80       # Exposing the service on port 80
+      targetPort: 5000  # Mapping to Flask's internal port

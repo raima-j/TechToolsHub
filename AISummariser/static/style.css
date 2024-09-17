@@ -1,0 +1,99 @@
+ /* Base styles for body */
+ body {
+     background: linear-gradient(120deg, #89CFF0, #FFC0CB);
+     font-family: 'Times New Roman', serif;
+     color: #000000;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+ }
+
+ /* Container styling */
+ .container {
+     margin-top: 50px;
+     background-color: rgba(255, 255, 255, 0.9);
+     padding: 30px;
+     border-radius: 15px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     max-width: 600px;
+     width: 100%;
+ }
+
+ /* Card styling */
+ .card {
+     border-radius: 15px;
+     overflow: hidden;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Form label styling */
+ .form-label {
+     font-weight: bold;
+     color: #6A5ACD;
+ }
+
+ /* Input and button styles */
+ input[type="text"],
+ input[type="file"],
+ button {
+     padding: 15px;
+     border: 1px solid #6A5ACD;
+     border-radius: 30px;
+     width: 100%;
+     box-sizing: border-box;
+     margin-bottom: 20px;
+ }
+
+ /* Button custom styling */
+ button {
+     background-color: #6A5ACD;
+     color: white;
+     cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+
+ button:hover {
+     background-color: #5A4ABD;
+     transform: scale(1.02);
+ }
+
+ /* Flash messages styling */
+ .alert {
+     padding: 15px;
+     margin-top: 10px;
+     border-radius: 10px;
+     text-align: center;
+     font-size: 16px;
+ }
+
+ .alert.success {
+     background-color: #28a745;
+     color: white;
+ }
+
+ .alert.error {
+     background-color: #dc3545;
+     color: white;
+ }
+
+ /* Footer styling */
+ footer {
+     text-align: center;
+     margin-top: 40px;
+     color: #6A5ACD;
+     font-size: 14px;
+ }
+
+ /* Media queries for responsiveness */
+ @media (max-width: 768px) {
+     .container {
+         padding: 20px;
+     }
+
+     button {
+         font-size: 14px;
+     }
+ }

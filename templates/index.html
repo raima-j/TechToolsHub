@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTools Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to TechTools Hub</h1>
+        <h2>Your Document Automation Tools</h2>
+
+        <div class="tools">
+            <a href="/tool1" class="tool-card">
+                <h3>PDF to Text Converter</h3>
+                <p>Convert PDFs to text files effortlessly</p>
+            </a>
+
+            <a href="/tool2" class="tool-card">
+                <h3>Table Extraction Tool</h3>
+                <p>Extract tables from PDFs to CSV or Excel</p>
+            </a>
+
+
+            <a href="/tool4" class="tool-card">
+                <h3>AI Summariser</h3>
+                <p>Summarise multiple documents using AI</p>
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2024 TechTools Hub. The Null Pointers.
+        </footer>
+    </div>
+</body>
+
+</html>

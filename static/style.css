@@ -1,0 +1,103 @@
+/* Cool gradient background animation: Black-Blue-Green */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #000000, #001f3f, #00ff99);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Adding a subtle glowing effect to the titles */
+h1 {
+    font-size: 3.5rem;
+    color: #00ff99;
+    text-shadow: 0 0 3px #040c09, 0 0 10px #00383f;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #00d2ff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 2px #040c09, 0 0 3px #1e316f;}
+
+/* Cool futuristic card design */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tools {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tool-card {
+    width: 22%;
+    padding: 30px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 255, 153, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.tool-card h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #001f3f;
+}
+
+/* Neon hover effect on the cards */
+.tool-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 15px rgba(0, 255, 153, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.tool-card p {
+    font-size: 1.1rem;
+    color: #b0ffb0;
+}
+
+/* Footer with a sleek design */
+footer {
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #00ff99;
+}
+
+@media (max-width: 768px) {
+    .tool-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-card {
+        width: 100%;
+    }
+}
